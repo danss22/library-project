@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update-book</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style type="text/css">
+        p {
+            margin: 0;
+        }
+        .inputStyle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="myContainer">
+    <form action="update-book" method="post" th:object="${book}">
+        <div style="
+                width:315px;
+                margin:0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+            <div class="inputStyle">
+        <input type="hidden" name="id" th:field="*{id}">
+        Название книги: <input type="text" name="name" th:field="*{name}">
+
+            </div>
+            <div class="inputStyle">
+        Автор книги: <input type="text" name="author" th:field="*{author}">
+
+            </div>
+            <div class="inputStyle">
+        Забронирована ли: <input type="checkbox" name="booking" th:field="*{booking}">
+
+            </div>
+            <div class="inputStyle">
+        Номер книги: <input type="number" name="number" th:field="*{number}">
+
+            </div>
+            <div class="inputStyle">
+        Дата получения: <input type="date" name="admission" th:field="*{admission}">
+
+            </div>
+
+            <div class="inputStyle">
+                Дата возврата <input type="date" name="returns" th:field="*{returns}">
+
+            </div>
+        <button type="submit" class="btn btn-success">Обновить книгу</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

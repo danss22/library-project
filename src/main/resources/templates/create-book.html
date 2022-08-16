@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create-book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style type="text/css">
+        p {
+            margin: 0;
+        }
+        .inputStyle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="myContainer">
+    <form action="create-book" method="post">
+        <div style="
+                width:315px;
+                margin:0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+            <div class="inputStyle">
+                <p>Название книги:</p>
+                <input type="text" name="name">
+            </div>
+
+            <div class="inputStyle">
+                <p>Автор книги:</p>
+                <input type="text" name="author">
+            </div>
+
+            <div class="inputStyle">
+                <p>Забронирована ли:</p>
+                <input type="checkbox" name="booking">
+            </div>
+
+            <div class="inputStyle">
+                <p>Номер книги:</p>
+                <input type="number" name="number">
+            </div>
+
+            <div class="inputStyle">
+                <p>Дата получения:</p>
+                <input type="date" name="admission">
+            </div>
+            <div class="inputStyle">
+                <p>Дата возврата:</p>
+                <input type="date" name="returns">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Сохранить новую книгу</button>
+    </form>
+</div>
+</body>
+</html>

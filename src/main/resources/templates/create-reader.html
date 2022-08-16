@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Create-reader</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style type="text/css">
+        p {
+            margin: 0;
+        }
+        .inputStyle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="myContainer">
+    <form action="create-reader" method="post">
+        <div style="
+                width:315px;
+                margin:0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+            <div class="inputStyle">
+                <p>Фамилия:</p>
+                <input type="text" name="surName">
+            </div>
+
+            <div class="inputStyle">
+                <p>Имя:</p>
+                <input type="text" name="name">
+            </div>
+
+            <div class="inputStyle">
+                <p>Отчество:</p>
+                <input type="text" name="patronymic">
+            </div>
+
+            <div class="inputStyle">
+                <p>Телефон:</p>
+                <input type="text" name="phone">
+            </div>
+
+            <div class="inputStyle">
+                <p>Email:</p>
+                <input type="text" name="email">
+            </div>
+
+            <div class="inputStyle">
+                <p>Дата Рождения:</p>
+                <input type="date" name="dateOfBirth">
+            </div>
+                <button type="submit" class="btn btn-success">Сохранить нового читателя</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
