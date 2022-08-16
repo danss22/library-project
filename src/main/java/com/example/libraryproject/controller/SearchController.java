@@ -13,22 +13,21 @@ import java.util.List;
 
 @Controller
 public class SearchController {
-
     @Autowired
     SearchRepository searchRepository;
 
     @GetMapping("search")
-        public String search(@RequestParam("author") String author, Model model){
+    public String search(@RequestParam("author") String author, Model model) {
         List<Book> byAuthor = searchRepository.findByAuthor(author);
-            model.addAttribute("books", byAuthor);
-            return "search";
-        }
+        model.addAttribute("books", byAuthor);
+        return "search";
+    }
 
     @PostMapping("search")
     public String search1(@RequestParam("author") String author, Model model) {
         List<Book> byAuthor = searchRepository.findByAuthor(author);
         model.addAttribute("books", byAuthor);
         return "search";
-        }
+    }
 }
 

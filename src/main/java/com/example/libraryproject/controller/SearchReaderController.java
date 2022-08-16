@@ -17,14 +17,14 @@ public class SearchReaderController {
     SearchReaderRepository searchReaderRepository;
 
     @GetMapping("search-reader")
-    public String search_reader(@RequestParam("surName") String surName, Model model){
+    public String search_reader(@RequestParam("surName") String surName, Model model) {
         List<Reader> byReader = searchReaderRepository.findBySurName(surName);
         model.addAttribute("reader", byReader);
         return "search-reader";
     }
 
     @PostMapping("search-reader")
-    public String search_reader1(@RequestParam("surName") String surName, Model model){
+    public String search_reader1(@RequestParam("surName") String surName, Model model) {
         List<Reader> byReader = searchReaderRepository.findBySurName(surName);
         model.addAttribute("reader", byReader);
         return "search-reader";

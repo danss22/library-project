@@ -26,7 +26,7 @@ public class ReaderController {
         return "reader";
     }
 
-    @GetMapping ("delete-reader")
+    @GetMapping("delete-reader")
     String delete(int id) {
         readerRepository.deleteById(id);
         return "redirect:reader";
@@ -49,6 +49,7 @@ public class ReaderController {
         model.addAttribute("reader", reader);
         return "update-reader";
     }
+
     @PostMapping("update-reader")
     String update(Reader reader) {
         readerRepository.save(reader);
